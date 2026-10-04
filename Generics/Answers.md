@@ -4,7 +4,7 @@
 * **What is different:**
   The underlying data types being stored and manipulated differ (`Student` vs `Course`).
 
----
+
 
 ## Step 3 — One class for both
 
