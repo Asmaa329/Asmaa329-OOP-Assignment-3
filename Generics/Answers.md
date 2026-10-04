@@ -14,3 +14,15 @@
 * **Explanation in own words:**
   When writing `Store<T>` without constraints, C# treats `T` as a completely generic type (inheriting only from `System.Object`). 
   Because `System.Object` has no `Id` property, the compiler cannot guarantee that any type passed as `T` at runtime will have an `Id`. To prevent runtime errors, C# rejects the access to `item.Id` at compile time.
+
+  ## Step 7 — Prove it in Main
+
+***Why `new Store<string>()` does NOT compile:**
+  `Store < T >` enforces a generic type constraint(`where T: IHasId`). The `System.String` type does not implement the `IHasId` interface. Therefore, attempting to instantiate `Store<string>` produces a compilation error(`CS0311`).
+
+---
+
+## Common Name Question
+
+* **What is the common name for the kind of class built in Steps 4 and 5?**
+  **Repository** (or** Generic Repository Pattern**).
